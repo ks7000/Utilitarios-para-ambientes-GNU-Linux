@@ -34,7 +34,7 @@
 #
 # ¿Qué hace este guión?
 # Crea una carpeta maestra de respaldo en el "home" del usuario y crea subcarpetas
-# para el tipo de base de datos y luego una carpeta para cad mes.
+# para el tipo de base de datos y luego una carpeta para cada mes.
 # De la lista de base de datos a (respaldar y/o ignorar) extrae la información
 # con MySQLDump y la comprime con gzip de manera "amigable" para rsync. 
 # Última actualización de este guión: jueves 5 de marzo de 2020.
@@ -58,7 +58,7 @@
 	ksDestinoAnuarioMes="$ksDestino/Respaldos$ksSeparador""MySQL/$(date +"%Y-%m%b")"
 	# Lista de base de datos a respaldar, por defecto (valor="") TODAS las que el 
 	# usuario tenga derechos; de lo contrario separar nombres con un espacio.
-	ksBD_a_respaldar="classicmodels"
+	ksBD_a_respaldar=""
 	# Lista de base de datos a ignorar separadas por un simple espacio
 	ksBD_a_ignorar="information_schema prueba pruebas"
 # Fin de variables personalizables
